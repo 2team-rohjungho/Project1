@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>掲示板</title>   
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>掲示板</h1>
+    <!-- 各入力フィールド -->
+    <p>
+        <input id="purpose" type="text" placeholder="purpose"></input> <!-- 目的を入力するフィールド -->
+        <input id="message" type="text" placeholder="message"></input> <!-- メッセージを入力するフィールド -->
+        <input id="mean" type="text" placeholder="mean"> <!-- 平均値を入力するフィールド -->
+        <input id="meanAddPhrase" type="text" placeholder="meanAddPhrase"></input> <!-- フレーズ追加後の平均値を入力するフィールド -->
+        <input id="meanAddMor" type="text" placeholder="meanAddMor"></input> <!-- 形態素追加後の平均値を入力するフィールド -->
+        <input id="meanAddAll" type="text" placeholder="meanAddAll"></input> <!-- フレーズと形態素を追加した後の平均値を入力するフィールド -->
+        <input id="runningTime" type="text" placeholder="runningTime"></input> <!-- 実行時間を入力するフィールド -->
+        <input id="yesValue" type="text" placeholder="yesValue"></input> <!-- Yesの値を入力するフィールド -->
+        <input id="noValue" type="text" placeholder="noValue"></input> <!-- Noの値を入力するフィールド -->
+    </p>
+    <!-- ボタン -->
+    <p>
+        <button id="post">入力</button> <!-- データを送信するための「入力」ボタン -->
+        <button id="refresh">リフレッシュ</button> <!-- データを更新するための「リフレッシュ」ボタン -->
+    </p>
+    
+    <!-- 個人DBメッセージの表示部分 -->
+    <h2>個人DBメッセージ</h2>
+    <table id="personaltable" class="personaltable">
+        <tr>
+            <th>メッセージID</th> <!-- メッセージID -->
+            <th>目的</th> <!-- 目的 -->
+            <th>メッセージ</th> <!-- メッセージ内容 -->
+            <th>意味</th> <!-- 意味 -->
+            <th>意味＋文章</th> <!-- 意味＋文章 -->
+            <th>意味＋形態素</th> <!-- 意味＋形態素 -->
+            <th>意味＋文章＋形態素</th> <!-- 意味＋文章＋形態素 -->
+            <th>実行時間</th> <!-- 実行時間 -->
+            <th>送信日</th> <!-- 送信日 -->
+            <th>受信日</th> <!-- 受信日 -->
+            <th>Yesの値</th> <!-- Yesの値 -->
+            <th>Noの値</th> <!-- Noの値 -->
+            <th>Yes or No</th> <!-- YesまたはNoの状態 -->
+            <th>Edit</th> <!-- 編集ボタン -->
+        </tr>
+    </table>
+
+    <!-- チームDBの照会部分 -->
+    <h2>チームDB照会</h2>
+    <table id="teamtable" class="teamtable">
+        <tr>
+            <th>Message Id</th> <!-- メッセージID -->
+            <th>Message</th> <!-- メッセージ内容 -->
+        </tr>
+    </table>
+
+    <!-- 全体DBの照会部分 -->
+    <h2>DB照会</h2>
+    <table id="alltable" class="alltable">
+        <tr>
+            <th>Message Id</th> <!-- メッセージID -->
+            <th>Message</th> <!-- メッセージ内容 -->
+        </tr>
+    </table>
+    </div>
+    
+    <!-- 外部JavaScriptファイルの読み込み -->
+    <script src="javascript.js"></script>
+</body>
+</html>

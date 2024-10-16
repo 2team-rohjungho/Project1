@@ -1,0 +1,108 @@
+/* 基本スタイル設定 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    align-items: center;
+}
+
+/* タイトルのスタイル */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    color: #444;
+}
+
+/* 入力欄のスタイル */
+input[type="text"] {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100px;
+}
+
+/* ボタンのスタイル */
+button {
+    background-color: #0f69b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 5px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #39068c;
+}
+
+/* テーブルのスタイル */
+.personaltable {
+    table-layout: auto; /* または 'fixed' で等しい列幅に設定 */
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    color: white;
+    text-align: center;
+}
+
+/* 基本テーブルのスタイル */
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center; /* テキストを中央揃え */
+}
+
+/* Edit列の特別なスタイルがないか確認 */
+table th:nth-child(14), table td:nth-child(14) {
+    display: table-cell; /* この列が必ず表示されるように設定 */
+}
+
+/* テーブル全体に適用される色や表示状態を確認 */
+table th {
+    background-color: #0f69b3; /* ヘッダーの背景色 */
+    color: white;
+}
+
+/* テーブルの内容に対する一般的なスタイル */
+table td {
+    color: black;
+}
+
+/* 最初の行に特別なスタイルを適用 */
+table tr:nth-child(1) {
+    background-color: #0f69b3;
+}
+
+/* 最初の列の幅を設定 */
+table td:nth-child(1) {
+    width: 200px;
+}
+
+/* チームテーブルと全体テーブルのスタイル */
+.teamtable, .alltable {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+/* 段落のスタイル */
+p {
+    text-align: center;
+}
