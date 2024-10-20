@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>私だけのカフェリスト in Kobe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/kobelogin.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>私だけのカフェリスト in Kobe</h1>
+
+        <!-- 아이디 입력 -->
+        <div id="username-step">
+            <label for="username">e-mail</label>
+            <input type="text" id="username" placeholder="e-mail">
+        </div>
+
+        <!-- 비밀번호 입력 -->
+        <div id="password-step">
+            <label for="password">password</label>
+            <input type="password" id="password" placeholder="password">
+        </div>
+        
+        <div class="back-confirm-container">
+            <!-- 뒤로가기 버튼 ↶ -->
+            <button onclick="goToMain()">☜後ろへ</button>
+            <!-- 확인 버튼 -->
+            <button onclick="login()">確認</button>
+        </div>        
+
+        <div>
+            <!-- 회원가입 버튼과 비밀번호 찾기 버튼 -->
+            <button class="signup" onclick="goToSignup()">会員登録</button>
+            <button class="find-password" onclick="findPassword()">find Password</button>
+
+        </div>
+    </div>
+
+    <!-- 사용자 정의 모달 -->
+    <div id="custom-alert" class="modal">
+        <div class="modal-content">
+            <p id="alert-message"></p>
+            <button onclick="closeModal()">確認</button>
+        </div>
+    </div>
+
+    <script src="javascript/kobelogin.js"></script>
+</body>
+</html>

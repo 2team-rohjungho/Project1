@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>new list 作り B</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/newlistB.css">
+</head>
+<body>
+    <!-- 로그인한 이메일을 표시할 영역 추가 -->
+    <div id="email-display"></div>
+
+    <!-- 메인으로 버튼 추가 -->
+    <button id="main-btn" class="main-button" onclick="goToMain()">Home</button>
+
+    <!-- 로그인 버튼 추가 -->
+    <button id="login-button" class="login-button" onclick="goToLogin()">Login</button>
+    
+    <div class="container">
+        <!-- 상단 대화창 -->
+        <div class="top-box" id="dialog-box">
+            <p id="dialog-text"></p>
+        </div>
+
+        <!-- 하단 선택 창 -->
+        <div class="bottom-box" id="selection-box">
+            <form id="selection-form">
+                <!-- 선택지 버튼이 동적으로 추가될 영역 -->
+            </form>
+        </div>
+
+        <div class="button-container">
+            <!-- 뒤로 버튼 -->
+            <button id="back-btn" onclick="goBack()">いやだ</button>
+            <!-- 확인 버튼 -->
+            <button id="confirm-btn" onclick="openModal()">はい</button>
+        </div>
+    </div>
+
+    <!-- 사용자 정의 팝업 모달 (확인 요청) -->
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <p>本当に選択を完了しますか？</p>
+            <button onclick="confirmSelection()">はい</button>
+        </div>
+    </div>
+
+    <!-- 사용자 정의 팝업 모달 (선택 완료) -->
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <p id="selected-style-text"></p>
+            <button onclick="closeResultModal()">閉じる</button>
+        </div>
+    </div>
+
+    <script src="javascript/newlistB.js"></script>
+</body>
+</html>

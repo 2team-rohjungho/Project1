@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>私だけのカフェリスト</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mycafelist.css">
+</head>
+<body>
+    <!-- 로그인한 이메일을 표시할 영역 -->
+    <div id="email-display"></div>
+    
+    <!-- 메인으로 버튼 -->
+    <div class="main-button-container">
+        <button class="main-button" onclick="goToMain()">Home</button>
+    </div>
+
+    <!-- 중앙 컨테이너 -->
+    <div class="container">
+        <h1>私だけのカフェリスト-検索</h1>
+
+        <!-- 데이터베이스에서 가져온 정보가 표시될 영역 -->
+        <div id="data-display" class="data-container">
+            <!-- 여기에 JavaScript로 데이터 표시 -->
+        </div>
+
+        <!-- 내 리스트에 저장하기 버튼 -->
+        <button class="save-button" onclick="saveToList()">私のリストに保存</button>
+    </div>
+
+    <!-- 사용자 지정 모달 팝업창 -->
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-message">私のリストに保存しました。</p>
+
+            <!-- 팝업창 안에 "나만의 리스트 목록" 버튼 추가 -->
+            <button class="list-button" onclick="goToList()">私だけのリスト</button>
+        </div>
+    </div>
+
+    <script src="javascript/mycafelist.js"></script>
+</body>
+</html>

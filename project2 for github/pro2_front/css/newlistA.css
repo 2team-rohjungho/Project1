@@ -1,0 +1,255 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('inkobe3-0.webp'); /* 배경 이미지 설정 */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Noto Sans JP', sans-serif; /* 일본어 폰트 적용 */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 로그인한 이메일을 표시할 영역 스타일 */
+#email-display {
+    background-color: rgba(0, 0, 0, 0.7); /* 반투명한 검은색 배경 */
+    color: white; /* 글자 색상 */
+    padding: 10px 20px; /* 내부 여백 */
+    border-radius: 20px; /* 타원형을 만들기 위한 둥근 모서리 */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+/* 로그인 버튼 스타일 */
+#login-button {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    background-color: #55451a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    display: none;
+}
+
+#login-button:hover {
+    background-color: #c2c457;
+}
+
+/* 메인으로 버튼 스타일 */
+#main-btn {
+    position: fixed;
+    top: 60px; /* 로그인 이메일 바로 아래 */
+    left: 10px;
+    background-color: #55451a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#main-btn:hover {
+    background-color: #c2c457;
+}
+
+/* 전체 컨테이너 스타일 */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+}
+
+/* 상단 네모칸 */
+.top-box {
+    background-color: rgba(255, 255, 255, 0.8); /* 반투명 흰색 */
+    padding: 20px;
+    border-radius: 10px;
+    flex: 0.4; /* 상단 박스의 크기를 줄임 */
+    margin-bottom: 20px;
+    font-size: 30px !important; /* 글씨 크기 조정 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    max-height: 30%; /* 최대 높이 제한 */
+    box-sizing: border-box; /* 패딩 및 테두리 포함 */
+}
+
+/* 하단 네모칸 */
+.bottom-box {
+    background-color: rgba(255, 255, 255, 0.8); /* 반투명 흰색 */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 22px !important; /* 글씨 크기 조정 */
+    justify-content: center; /* 수직 중앙 정렬 */
+    text-align: center; /* 텍스트 수평 중앙 정렬 */
+    flex: 0.6; /* 하단 박스의 크기를 늘림 */
+    max-height: 70%; /* 최대 높이 제한 */
+    box-sizing: border-box; /* 패딩 및 테두리 포함 */
+    overflow-y: auto; /* 내용이 넘칠 경우 스크롤 */
+}
+
+/* 사용자 입력을 표시할 요소 스타일 수정 */
+#user-text {
+    color: #333333; /* 글씨 색상을 진한 회색으로 설정 */
+    text-shadow: 
+        -1px -1px 0 #C0C0C0, /* 좌상단 은색 테두리 */
+         1px -1px 0 #C0C0C0, /* 우상단 은색 테두리 */
+        -1px  1px 0 #C0C0C0, /* 좌하단 은색 테두리 */
+         1px  1px 0 #C0C0C0; /* 우하단 은색 테두리 */
+    font-weight: bold; /* 글씨를 굵게 표시 */
+}
+
+/* 대화문 글자 애니메이션 */
+#dialog-text {
+    font-size: 22px;
+    white-space: pre-wrap; /* 줄 바꿈 포함 */
+    overflow: hidden;
+    border-right: 2px solid black;
+}
+
+.user-dialog {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 버튼 컨테이너 스타일 */
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+/* 뒤로 버튼 스타일 */
+#back-btn {
+    padding: 15px 30px;
+    background-color: #a6a6a6;
+    font-family: 'Noto Sans JP', sans-serif; /* 일본어 폰트 적용 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#back-btn:hover {
+    background-color: #8c8c8c;
+}
+
+/* 버튼 스타일 */
+button {
+    padding: 15px 30px;
+    background-color: #55451a;
+    font-family: 'Noto Sans JP', sans-serif; /* 일본어 폰트 적용 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: auto; /* 버튼이 하단에 위치하도록 설정 */
+}
+
+button:hover {
+    background-color: #c2c457;
+}
+
+/* 모달 스타일 */
+.modal {
+    display: none; /* 기본적으로 모달을 숨김 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+/* 다시 녹음 확인 모달 스타일 */
+#retry-alert .modal-content {
+    display: flex;
+    flex-direction: column; /* 텍스트와 버튼을 세로로 배치 */
+    align-items: center; /* 중앙 정렬 */
+    justify-content: center; /* 중앙 정렬 */
+    gap: 30px; /* 텍스트와 버튼 사이의 여백 줄이기 */
+    width: 300px; /* 모달의 너비 */
+    margin: 15% auto; /* 모달 위치 조정 */
+    padding: 20px; /* 모달의 내부 여백 */
+    box-sizing: border-box; /* 패딩과 테두리를 포함한 크기 계산 */
+    max-height: 200px; /* 모달의 최대 높이 설정 */
+}
+
+#retry-alert .modal-content p {
+    margin: 0;
+    font-size: 16px; /* 텍스트 크기 조정 */
+}
+
+#retry-alert .button-container {
+    display: flex;
+    gap: 10px; /* 버튼 간의 여백 */
+}
+
+#retry-alert button {
+    width: 100px;
+    padding: 10px; /* 버튼의 내부 여백 */
+    font-size: 14px; /* 버튼 텍스트 크기 */
+}
+
+/* 도움말 버튼 스타일 */
+.help-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #55451a;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* 도움말 텍스트 스타일 */
+.help-text {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 370px;
+}
+
+.help-text p {
+    margin: 0;
+}

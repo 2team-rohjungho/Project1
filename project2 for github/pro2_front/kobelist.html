@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>私だけのカフェリスト</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/kobelist.css">
+</head>
+<body>
+    <!-- 로그인한 이메일을 표시할 영역 추가 -->
+    <div id="email-display"></div>
+
+    <!-- 메인으로 가는 버튼 -->
+    <button class="main-button" onclick="goToMain()">Home</button>
+
+    <!-- 로그인 버튼 -->
+    <button class="login-button" id="login-button" onclick="goToLogin()">Login</button>
+
+    <!-- 중앙에 버튼이 있는 컨테이너 -->
+    <div class="list-container">
+        <button onclick="loadExistingList()">既存のリストを読み込む</button>
+        <button onclick="createNewList()">新しいリスト作り</button>
+    </div>
+
+    <!-- 사용자 정의 모달 -->
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <button onclick="closeModal()">確認</button>
+        </div>
+    </div>
+
+    <script src="javascript/kobelist.js"></script>
+</body>
+</html>

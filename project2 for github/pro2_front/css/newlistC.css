@@ -1,0 +1,247 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('inkobe3-0.webp'); /* 배경 이미지 */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Noto Sans JP', sans-serif; /* 일본어 폰트 적용 */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 로그인한 이메일을 표시할 영역 스타일 */
+#email-display {
+    background-color: rgba(0, 0, 0, 0.7); /* 반투명한 검은색 배경 */
+    color: white; /* 글자 색상 */
+    padding: 10px 20px; /* 내부 여백 */
+    border-radius: 20px; /* 타원형을 만들기 위한 둥근 모서리 */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+/* 로그인 버튼 스타일 */
+#login-button {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    background-color: #55451a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    display: none;
+}
+
+#login-button:hover {
+    background-color: #c2c457;
+}
+
+/* 메인으로 버튼 스타일 */
+#main-btn {
+    position: fixed;
+    top: 60px; /* 로그인 이메일 바로 아래 */
+    left: 10px;
+    background-color: #55451a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#main-btn:hover {
+    background-color: #c2c457;
+}
+
+/* 메인 컨테이너 */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 컨텐츠를 중앙으로 배치 */
+    align-items: center;
+    width: 80%;
+    height: 80%;
+}
+
+/* 상단 대화창 */
+.top-box {
+    background-color: rgba(255, 255, 255, 0.8); /* 반투명 흰색 */
+    padding: 10px; /* 패딩을 newlistB와 동일하게 설정 */
+    border-radius: 10px;
+    margin-bottom: 20px; /* newlistB와 동일한 마진 설정 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* 전체 컨테이너 너비에 맞춤 */
+    max-width: 800px; /* 최대 너비를 newlistB와 동일하게 설정 */
+    height: 250px; /* 높이를 newlistB와 동일하게 설정 */
+}
+
+#dialog-text {
+    font-size: 24px; /* 글씨 크기를 크게 수정 */
+    white-space: pre-wrap; /* 줄바꿈 유지 */
+    overflow: hidden;
+    border-right: 2px solid black;
+}
+
+/* 하단 대화창 추가 */
+.bottom-dialog-box {
+    background-color: rgba(255, 255, 255, 0.8); /* 반투명 흰색 */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* 전체 컨테이너 너비에 맞춤 */
+    max-width: 600px; /* 최대 너비 제한 */
+    margin-top: 40px; /* 상단 대화창과의 간격을 좀 더 중앙에 맞추기 위해 증가 */
+}
+
+/* 하단 버튼 영역 */
+.bottom-box {
+    display: flex;
+    gap: 10px;
+}
+
+/* 돌아가기 버튼 */
+#back-btn {
+    padding: 15px 30px;
+    background-color: #a6a6a6;
+    font-family: 'Noto Sans JP', sans-serif; /* 일본어 폰트 적용 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#back-btn:hover {
+    background-color: #8c8c8c;
+}
+
+/* 팝업창 스타일 */
+.popup {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 반투명 배경 */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* 다른 요소 위에 표시 */
+    overflow-y: auto; /* 팝업 전체에 세로 스크롤 추가 */
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 80%;
+    text-align: center; /* 텍스트와 버튼 중앙 정렬 */
+    max-height: 90vh; /* 최대 높이를 뷰포트 높이의 90%로 제한 */
+    overflow-y: auto; /* 콘텐츠 내부에 스크롤 추가 */
+}
+
+.close {
+    cursor: pointer;
+    font-size: 20px;
+    float: right;
+}
+
+/* 다운로드 버튼 */
+.download-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #55451a; /* 색상 변경 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.download-btn:hover {
+    background-color: #c2c457;
+}
+
+/* 카페 리스트 작성 확인 버튼 */
+.confirm-list-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2E4A3C; /* 색상 변경 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.confirm-list-btn:hover {
+    background-color: #c2c457;
+}
+
+/* 확인 버튼 */
+#confirm-btn {
+    padding: 15px 30px;
+    background-color: #55451a;
+    font-family: 'Noto Sans JP', sans-serif; /* 일본어 폰트 적용 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#confirm-btn:hover {
+    background-color: #c2c457;
+}
+
+/* 다운로드 버튼 */
+/* .download-btn, .confirm-list-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2E4A3C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.download-btn:hover, .confirm-list-btn:hover {
+    background-color: #c2c457;
+} */
+
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 8px solid #55451a; /* 애니메이션 색상 */
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite; /* 애니메이션 효과 */
+}
+
+/* 로딩 중 팝업창 추가 */
+#loading-popup .popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* 수직 정렬을 위한 추가 */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>私だけのカフェリスト</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/changepw.css">
+</head>
+<body>
+    <!-- 로그인한 이메일을 표시할 영역 추가 -->
+    <div id="email-display"></div>
+
+    <div class="change-password-container">
+        <h2>change password</h2>
+        <input type="password" id="current-password" placeholder="既存パスワード">
+        <input type="password" id="new-password" placeholder="新しいパスワード">
+        <input type="password" id="confirm-password" placeholder="新しいパスワード確認">
+        
+        <!-- 버튼 컨테이너 -->
+        <div class="button-container">
+            <button onclick="cancelChange()">キャンセル</button>
+            <button onclick="confirmChange()">確認</button>
+        </div>
+    </div>
+
+    <!-- 사용자 정의 모달 팝업 -->
+    <div id="custom-alert" class="modal">
+        <div class="modal-content">
+            <p id="alert-message"></p>
+            <button onclick="closeModal()">確認</button>
+        </div>
+    </div>
+
+    <script src="javascript/changepw.js"></script>
+</body>
+</html>

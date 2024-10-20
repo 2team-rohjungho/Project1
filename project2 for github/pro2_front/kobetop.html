@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>私だけのカフェリスト in Kobe - main</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/kobetop.css">
+</head>
+<body>
+    <!-- 로그인한 이메일을 표시할 요소 추가 -->
+    <div id="email-display"></div> 
+
+    <!-- 텍스트를 적절히 스타일링하기 위해 추가된 클래스 "title-text" -->
+    <h2 class="title-text">「私だけのカフェリスト」</h2>
+    
+    <!-- 햄버거 버튼 (사이드 메뉴 열기) -->
+    <button class="menu-btn" id="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <!-- 사이드 메뉴 -->
+    <div id="side-menu" class="side-menu">
+        <!-- 사이드 메뉴 닫기 버튼 -->
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <!-- 비밀번호 변경 링크 -->
+        <a href="#" id="change-password-link" onclick="changePassword()">change password</a>
+        <!-- 로그아웃 버튼 -->
+        <a href="#" id="logout-link" onclick="logout()">Logout</a>
+        <!-- 로그인 버튼 -->
+        <a href="#" id="login-link" onclick="goToLogin()">Login</a>
+    </div>
+
+    <!-- 페이지 중앙에 들어가기 버튼 -->
+    <div class="center-container">
+        <button onclick="enter()">いらっしゃいませ</button>
+    </div>
+
+    <!-- 사용자 정의 모달 팝업 -->
+    <div id="custom-alert" class="modal">
+        <div class="modal-content">
+            <p id="alert-message"></p>
+            <button onclick="closeModal()">確認</button> <!-- 수정된 부분 -->
+        </div>
+    </div>
+
+
+    <!-- JavaScript 파일 연결 -->
+    <script src="javascript/kobetop.js"></script>
+</body>
+</html>

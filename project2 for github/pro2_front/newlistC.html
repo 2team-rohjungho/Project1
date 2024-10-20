@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new list 作り C</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/newlistC.css">
+</head>
+<body>
+    <!-- 로그인한 이메일을 표시할 영역 추가 -->
+    <div id="email-display"></div>
+
+    <!-- 메인으로 버튼 추가 -->
+    <button id="main-btn" class="main-button" onclick="goToMain()">Home</button>
+
+    <!-- 로그인 버튼 추가 -->
+    <button id="login-button" class="login-button" onclick="goToLogin()">Login</button>
+
+    <!-- 메인 컨테이너 -->
+    <div class="container">
+        <!-- 상단 대화창 -->
+        <div class="top-box">
+            <p id="dialog-text"></p>
+        </div>
+
+        <!-- 하단 대화창 추가 -->
+        <div class="bottom-dialog-box">
+            <!-- 하단 버튼 영역 -->
+            <div class="bottom-box">
+                <button id="back-btn" onclick="goBack()">いやだ</button>
+                <button id="confirm-btn" onclick="confirmSelection()">はい</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 팝업창 추가 -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <!-- 이미지 요소 추가 -->
+            <img id="myImage" style="display:none; width:100%;" alt="카페 이미지">
+            <p id="image-message">画像がありません。</p>
+            <!-- 다운 버튼 추가 -->
+            <button id="download-btn" class="download-btn">写真　欲しい~</button>
+            <!-- 카페 리스트 작성 확인 버튼 추가 -->
+            <button id="confirm-list-btn" class="confirm-list-btn" onclick="goToLoading()">この雰囲気のまま、カフェのリストを作成します。</button>
+        </div>
+    </div>
+
+    <!-- 로딩 중 팝업창 추가 -->
+    <div id="loading-popup" class="popup">
+        <div class="popup-content">
+            <p>Loading···</p>
+            <div class="spinner"></div> <!-- 로딩 애니메이션을 위한 div -->
+        </div>
+    </div>
+
+    <!-- 로딩 완료 팝업창 추가 -->
+    <div id="loading-complete-popup" class="popup">
+        <div class="popup-content">
+            <p>Loadingが終わりました。</p>
+            <button onclick="showImagePopup()">確認</button>
+        </div>
+    </div>
+
+    <script src="javascript/newlistC.js"></script>
+</body>
+</html>

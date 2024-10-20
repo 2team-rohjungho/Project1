@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>会員登録</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/koberegister.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h1>会員登録</h1>
+
+        <label for="name">名前:</label>
+        <input type="text" id="name" placeholder="名前">
+
+        <label for="email">e-mail:</label>
+        <input type="email" id="email" placeholder="e-mail">
+
+        <label for="password">password:</label>
+        <input type="password" id="password" placeholder="password">
+        <small>※ パスワードは8文字以上入力してください。</small>
+
+        <label for="confirm-password">password check:</label>
+        <input type="password" id="confirm-password" placeholder="password check">
+
+        <label for="gender">性別:</label>
+        <select id="gender">
+            <option value="">選んでください</option>
+            <option value="male">男性</option>
+            <option value="female">女性</option>
+        </select>
+
+        <label for="dob">生年月日:</label>
+        <input type="date" id="dob" placeholder="0000年00月00日">
+
+        <label for="phone">電話番号:</label>
+        <input type="tel" id="phone" placeholder="電話番号">
+
+        <!-- 마케팅 수신동의 -->
+        <label for="marketing-consent">
+            <input type="checkbox" id="marketing-consent">
+            マーケティング情報の受信に同意します。
+        </label>
+
+        <div class="button-group">
+            <button onclick="cancelSignup()">キャンセル</button>
+            <button onclick="signup()">加入します</button>
+        </div>
+    </div>
+
+    <!-- 사용자 정의 모달 팝업 -->
+    <div id="custom-alert" class="modal" style="display:none;">
+        <div class="modal-content">
+            <p id="alert-message"></p>
+            <button onclick="closeModalAndRedirect()">確認</button> <!-- 확인 버튼 클릭 시 로그인 페이지로 이동 -->
+        </div>
+    </div>
+
+    <!-- flatpickr CSS 추가 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- flatpickr JS 추가 -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- 일본어 언어 지원 추가 -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+
+
+    <script src="javascript/koberegister.js"></script>
+</body>
+</html>

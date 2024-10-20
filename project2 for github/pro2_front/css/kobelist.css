@@ -1,0 +1,140 @@
+/* 기본 스타일 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('kobe01-0.png');
+    background-size: cover; /* 전체 배경화면을 채우기 위해 cover 사용 */
+    background-position: center;
+    font-family: 'Noto Sans JP', sans-serif; /* 일본어 폰트 적용 */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* 버튼 위치를 절대적으로 설정하기 위해 추가 */
+}
+
+/* 로그인한 이메일을 표시할 영역 스타일 */
+#email-display {
+    background-color: rgba(0, 0, 0, 0.7); /* 반투명한 검은색 배경 */
+    color: white; /* 글자 색상 */
+    padding: 10px 20px; /* 내부 여백 */
+    border-radius: 20px; /* 타원형을 만들기 위한 둥근 모서리 */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+/* 메인으로 가는 버튼 스타일 */
+.main-button {
+    position: absolute;
+    top: 60px;
+    left: 20px; /* 왼쪽에서 20px 떨어지도록 설정 */
+    font-size: 19px; /* 글씨 크기 확대 */
+    padding: 15px 30px;
+    background-color: #55451a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-button:hover {
+    background-color: #c2c457;
+}
+
+/* 로그인 버튼 스타일 */
+.login-button {
+    font-size: 20px; /* 글씨 크기 확대 */
+    position: absolute;
+    top: 60px;
+    right: 19px; /* 오른쪽에서 20px 떨어지도록 설정 */
+    padding: 15px 30px;
+    background-color: #55451a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #c2c457;
+}
+
+
+/* 리스트 컨테이너 스타일 */
+.list-container {
+    background-color: rgba(255, 255, 255, 0.9); /* 기존 0.8에서 0.9로 투명도를 조금 더 낮춤 */
+    padding: 50px; /* 배경 크기를 더 크게 하기 위해 패딩을 50px로 증가 */
+    border-radius: 15px; /* 둥근 모서리 조금 더 강조 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 강도 증가 */
+    text-align: center;
+}
+
+/* 기본 버튼 스타일 (既存のリストを読み込む 버튼 포함) */
+.list-container button {
+    width: 250px; /* 버튼 크기 확대 */
+    padding: 15px; /* 버튼 안의 여백 확대 */
+    margin: 20px; /* 버튼 사이 간격 확대 */
+    font-size: 20px; /* 글씨 크기 확대 */
+    background-color: #55451a; /* 기존 버튼 배경색 */
+    font-family: 'Noto Sans JP', sans-serif; /* 일본어 폰트 적용 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.list-container button:hover {
+    background-color: #c2c457; /* 기존 버튼의 hover 효과 */
+}
+
+/* 두 번째 버튼(新しいリスト作り)의 스타일 변경 */
+.list-container button:nth-child(2) {
+    background-color: #E5A723; /* 두 번째 버튼 색상 (#2E4A3C) */
+    font-family: 'Noto Sans JP', sans-serif; /* 일본어 폰트 적용 */
+}
+
+.list-container button:nth-child(2):hover {
+    background-color: #4F7A5F; /* 두 번째 버튼의 hover 효과 색상 */
+}
+
+
+/* 모달 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #55451a;
+    font-family: 'Noto Sans JP', sans-serif; /* 일본어 폰트 적용 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #c2c457;
+}
